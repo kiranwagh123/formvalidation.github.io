@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<style>
+  body{
+ background-color: #3498db;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+
+  }
+  #form-container{
+background-color: white;
+padding: 50px;
+text-align: center;
+
+  }
+  h2{
+     margin: 0px 0px 10px 0px; 
+  }
+  input{
+  width:  200px;
+  margin: 10px 0px;
+  padding: 10px;
+ 
+
+  }
+  #submit{
+  width: 222px;
+  background-color: #3498db ;
+  border: 0px;
+  color: white;
+}
+.error{
+  color: red;
+  text-align: left;
+  margin: 0;
+
+}
+
+
+</style>
+
+<body>
+  
+
+    
+  <div id="form-container">
+  <form  action="./success.html" id="myform">
+    <h2>Login</h2>
+    <input type="text" placeholder="User Name" id="username" ><br>
+ 
+    <p id="usererror2" class="error"></p>
+    <input type="password" placeholder="Password" id="password" required><br>
+    <p id="usererror4" class="error"></p>
+    <!-- <p id="passrerror" class="error"></p> -->
+
+    
+    <input type="submit" name="submit" value="Submit" id="submit" onclick=" valiateForm()">
+    
+  </form>
+</div>
+  
+  <script>
+    
+    function valiateForm(){
+      
+      var usernames = document.getElementById('username').value;
+      var passwords = document.getElementById('password').value;
+
+
+      
+      
+        if(usernames == ""){
+          
+          document.getElementById('usererror2').innerHTML='User Name Is Emty'
+          return false
+          
+          
+        }
+    
+    
+      if(usernames.length < 3){
+      
+          
+          document.getElementById('usererror2').innerHTML='User Name Is 3 Above Chrarector'
+          return false
+          
+          
+        }
+    if(usernames.length < 3 == username.length < 3  ){
+      
+          
+      document.getElementById('usererror2').innerHTML='User Name Validate '
+      usererror2.style.color='green'
+      return false
+      
+      
+    }
+    
+   
+   
+
+ }
+
+
+
+
+
+
+
+
+
+  
+     
+
+  </script>
+
+
+
+</body>
+</html>
